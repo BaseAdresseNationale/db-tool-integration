@@ -37,7 +37,7 @@ RUN curl -fsSL https://pgp.mongodb.com/server-6.0.asc | gpg --dearmor -o /usr/sh
 # Installation des clients de bases de données
 RUN apt-get update && \
     apt-get install -y --no-install-recommends \
-    postgresql-client-15 \
+    postgresql-client-16 \
     mongodb-mongosh \
     mongodb-org-tools \
     redis-tools \
