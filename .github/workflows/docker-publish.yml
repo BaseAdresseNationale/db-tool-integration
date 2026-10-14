@@ -3,16 +3,13 @@ name: Build and Publish Docker Image
 on:
   push:
     branches: [ main ]
-    # Publish on tag creation
     tags: [ 'v*.*.*' ]
   pull_request:
     branches: [ main ]
 
 env:
-  # Repository name
   REGISTRY: ghcr.io
-  # GitHub username or organization
-  IMAGE_NAME: ${{ github.repository_owner }}/db-tools
+  IMAGE_NAME: ${{ github.repository_owner }}/db-tool-integration
 
 jobs:
   build-and-push:
